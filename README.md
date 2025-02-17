@@ -11,4 +11,4 @@ b) pymoo package, as available on PyPi and can be installed using: pip install p
 a) Download LHFiD.py and run_LHFiD.ipynb and place them in the same folder <br>
 b) Execute all cells in run_LHFiD.ipynb
 
-If you face any difficulty running this code, please reach out to me at mittalsukrit@gmail.com
+If you face any difficulty running this code, please reach out to us at dhish.saxena@me.iitr.ac.in or mittalsukrit@gmail.com. 
