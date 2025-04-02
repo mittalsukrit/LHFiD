@@ -10,6 +10,7 @@ from pymoo.operators.sampling.rnd import FloatRandomSampling
 from pymoo.util.misc import set_if_none
 from pymoo.util.normalization import normalize
 from pymoo.util.function_loader import load_function
+from pymoo.util.nds.non_dominated_sorting import NonDominatedSorting
 
 # ==============
 # Implementation
@@ -127,6 +128,13 @@ class LHFID(GeneticAlgorithm):
         """Terminate LHFiD, if suggested by the stabilization tracking algorithm"""
         if self.termination_suggestion is not None:
             print("# The algorithm terminated after " + str(self.n_gen) + " generations.")
+
+            if self.problem.n_obj == 2 or self.problem.n_obj == 3:
+                # Filter out and keep only the non-dominated solutions in self.pop
+                F = self.pop.get("F")
+                non_dominated_indices = NonDominatedSorting().do(F, only_non_dominated_front=True)
+                self.pop = self.pop[non_dominated_indices]
+
             self.termination.force_termination = True
             return
 
