@@ -4,7 +4,7 @@ LHFiD is a **many-objective evolutionary algorithm (MaOEA)** implementation buil
 
 The method corresponds to the algorithm described in the published paper:
 
-- **Saxena, D., & Mittal, S.** “A New Many-Objective Evolutionary Algorithm Based on Localized Hyperplane-Following in Dominance (LHFiD).” *IEEE Transactions on Evolutionary Computation*.
+D. K. Saxena, S. Mittal, S. Kapoor and K. Deb, "A Localized High-Fidelity-Dominance-Based Many-Objective Evolutionary Algorithm," in *IEEE Transactions on Evolutionary Computation*, vol. 27, no. 4, pp. 923-937, Aug. 2023, doi: 10.1109/TEVC.2022.3188064.
 - Paper link: https://ieeexplore.ieee.org/abstract/document/9814856
 
 ---
