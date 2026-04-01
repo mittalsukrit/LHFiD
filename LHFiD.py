@@ -9,7 +9,10 @@ from pymoo.operators.mutation.pm import PM
 from pymoo.operators.sampling.rnd import FloatRandomSampling
 from pymoo.util.misc import set_if_none
 from pymoo.util.normalization import normalize
-from pymoo.util.function_loader import load_function
+try:
+    from pymoo.util.function_loader import load_function # pymoo <=0.6 exposed load_function from util.function_loader which has since been deprecated
+except ImportError:
+    from pymoo.functions import load_function # >=0.6 moved this helper under pymoo.functions
 from pymoo.util.nds.non_dominated_sorting import NonDominatedSorting
 
 # ==============
